@@ -67,10 +67,9 @@ class yEd:
     self.ids += 1
     return n
 
-  def save(self, filename):
-    f = open(filename, "w")
-    f.write(Graph_text % { "graph": "".join(self.elements) })
-    f.close()
+  def save(self, name):
+    with open(name, "w") as f:
+      f.write(Graph_text % { "graph": "".join(self.elements) })
 
   def __init__(self):
     self.node_style = {
