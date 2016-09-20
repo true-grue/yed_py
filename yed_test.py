@@ -1,9 +1,9 @@
 import random
-from yed import yEd
+import yed
 
 N = 1000
 
-y = yEd()
+y = yed.Graph()
 
 nodes = []
 
@@ -12,6 +12,6 @@ for i in range(N):
   nodes.append(y.node(text=str(i), fill_color="#" + color * 3))
 
 for i in range(len(nodes)):
-  nodes[i].connect(random.choice(nodes))
+  nodes[i].to(random.choice(nodes))
 
 y.save("yed_test.graphml")
