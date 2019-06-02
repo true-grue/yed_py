@@ -1,4 +1,4 @@
-# Tiny Python library for graph drawing in [yEd](https://www.yworks.com/products/yed) (as an alternative to Graphviz)
+# Tiny Python library for graph drawing in [yEd](https://www.yworks.com/products/yed)
 
 ```Python
 import yed
