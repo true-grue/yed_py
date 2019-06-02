@@ -3,6 +3,37 @@
 
 import cgi
 
+
+NODE_STYLE = dict(
+    text="",
+    x=0,
+    y=0,
+    width=50,
+    height=50,
+    fill_color="#ffffff",
+    border_color="#000000",
+    has_border_color="true",
+    border_width="1",
+    font_family="Arial",
+    font_size="12",
+    text_color="#000000",
+    shape="circle"
+)
+
+
+EDGE_STYLE = dict(
+    text="",
+    directed="true",
+    line_color="#000000",
+    line_width="1",
+    source_arrow="none",
+    target_arrow="delta",
+    font_family="Arial",
+    font_size="12",
+    text_color="#000000"
+)
+
+
 GRAPH_XML = """\
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
@@ -38,36 +69,6 @@ EDGE_XML = """\
 </data>
 </edge>
 """
-
-
-NODE_STYLE = dict(
-    text="",
-    x=0,
-    y=0,
-    width=50,
-    height=50,
-    fill_color="#ffffff",
-    border_color="#000000",
-    has_border_color="true",
-    border_width="1",
-    font_family="Arial",
-    font_size="12",
-    text_color="#000000",
-    shape="circle"
-)
-
-
-EDGE_STYLE = dict(
-    text="",
-    directed="true",
-    line_color="#000000",
-    line_width="1",
-    source_arrow="none",
-    target_arrow="delta",
-    font_family="Arial",
-    font_size="12",
-    text_color="#000000"
-)
 
 
 class Graph:
