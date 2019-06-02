@@ -23,4 +23,4 @@ for n in [n5]:
 y.save("k5.graphml")
 ```
 
-<img src="doc/k5.png" width="100">
+<img src="k5.png" width="100">
