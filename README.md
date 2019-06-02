@@ -39,7 +39,7 @@ for i in range(100):
 for n in nodes:
     y.link(n, choice(nodes))
 
-y.save("test.graphml")
+y.save("random.graphml")
 ```
 
 <img src="random.png"></img>
