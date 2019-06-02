@@ -83,7 +83,7 @@ class Graph:
         self.node_id += 1
         return d
 
-    def link(self, n1, n2, **style):
+    def edge(self, n1, n2, **style):
         d = dict(EDGE_STYLE, source=n1["id"], target=n2["id"])
         for k in style:
             d[k] = cgi.escape(str(style[k]))
