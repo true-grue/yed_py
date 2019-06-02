@@ -1,17 +1,21 @@
-import random
 import yed
-
-N = 1000
 
 y = yed.Graph()
 
-nodes = []
+n1 = y.node(text="1", fill_color="#aaaaaa")
+n2 = y.node(text="2", fill_color="#aaaaaa")
+n3 = y.node(text="3", fill_color="#aaaaaa")
+n4 = y.node(text="4", fill_color="#aaaaaa")
+n5 = y.node(text="5", fill_color="#aaaaaa")
 
-for i in range(N):
-  color = "%02x" % random.randint(100, 255)
-  nodes.append(y.node(text=str(i), fill_color="#" + color * 3))
+for n in [n2, n3, n4, n5]:
+    y.link(n1, n, target_arrow="none")
+for n in [n3, n4, n5]:
+    y.link(n2, n, target_arrow="none")
+for n in [n4, n5]:
+    y.link(n3, n, target_arrow="none")
+for n in [n5]:
+    y.link(n4, n, target_arrow="none")
 
-for i in range(len(nodes)):
-  nodes[i].to(random.choice(nodes))
+y.save("k5.graphml")
 
-y.save("yed_test.graphml")
