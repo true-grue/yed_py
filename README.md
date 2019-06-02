@@ -1,4 +1,4 @@
-# Python interface for [yEd](https://www.yworks.com/products/yed)
+# Tiny Python library for [yEd](https://www.yworks.com/products/yed)
 
 ```Python
 import yed
