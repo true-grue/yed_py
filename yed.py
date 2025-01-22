@@ -1,8 +1,6 @@
-# Python interface for yEd
 # Author: Peter Sovietov
 
-import cgi
-
+import html
 
 NODE_STYLE = dict(
     text="",
@@ -79,7 +77,7 @@ class Graph:
     def node(self, **style):
         d = dict(NODE_STYLE, id=self.node_id)
         for k in style:
-            d[k] = cgi.escape(str(style[k]))
+            d[k] = html.escape(str(style[k]))
         self.items.append(NODE_XML % d)
         self.node_id += 1
         return d
@@ -87,7 +85,7 @@ class Graph:
     def edge(self, n1, n2, **style):
         d = dict(EDGE_STYLE, source=n1["id"], target=n2["id"])
         for k in style:
-            d[k] = cgi.escape(str(style[k]))
+            d[k] = html.escape(str(style[k]))
         self.items.append(EDGE_XML % d)
         return n1
 
